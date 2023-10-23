@@ -155,11 +155,29 @@ const br11 = document.createElement("br");
 
  // CAMPO SELECT 
 // MIRAR PQ COÑO NO FUNCIONA
- const seleccion = document.createElement("input");
- seleccion.setAttribute("type", "select");
- seleccion.setAttribute("value", "valor1");
- seleccion.setAttribute("value", "valor2");
- const br14 = document.createElement("br");
+// Crear un elemento <select>
+const seleccion = document.createElement("select");
+
+// Crear opciones <option> y configurar sus valores y etiquetas
+const option1 = document.createElement("option");
+option1.value = "valor1";
+option1.text = "Opción 1";
+
+const option2 = document.createElement("option");
+option2.value = "valor2";
+option2.text = "Opción 2";
+
+// Agregar las opciones al elemento <select>
+seleccion.appendChild(option1);
+seleccion.appendChild(option2);
+
+// Crear un salto de línea
+const br14 = document.createElement("br");
+
+// Agregar el elemento <select> y el salto de línea al documento o a otro elemento
+document.body.appendChild(seleccion);
+document.body.appendChild(br14);
+
 
 
 
