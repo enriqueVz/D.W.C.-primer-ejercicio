@@ -236,20 +236,21 @@ const br11 = document.createElement("br");
 
  // CAMPO SELECT (ARREGLAR LOS TEXTOS Y EL PLACEHOLDER)
 
- const seleccion = document.createElement("select");
-seleccion.textContent = "Haga click para elegir";
-seleccion.setAttribute("placeholder", "Haga click para elegir");
-const opt1 = document.createElement("option");
-opt1.setAttribute("text", "opt1")
-opt1.setAttribute("name", "Opción 1")
+ // Crear un elemento <select>
+const seleccion = document.createElement("select");
 
-const opt2 = document.createElement("option");
-opt2.setAttribute("text", "opt2")
-opt2.setAttribute("name", "Opción 2")
+// Crear opciones <option> y configurar sus valores y etiquetas
+const option1 = document.createElement("option");
+option1.value = "valor1";
+option1.text = "Opción 1";
 
-const opt3 = document.createElement("option");
-opt3.setAttribute("value", "opt3")
-opt3.setAttribute("text", "Opción 3")
+const option2 = document.createElement("option");
+option2.value = "valor2";
+option2.text = "Opción 2";
+
+
+// Agregar el elemento <select> y el salto de línea al documento o a otro elemento
+document.body.appendChild(seleccion);
 
 
  const br14 = document.createElement("br");
@@ -416,10 +417,11 @@ btnwipe.setAttribute("type", "reset");
         //sELECT
 
 
-        seleccion.appendChild(opt1);
-        seleccion.appendChild(opt2);
-        seleccion.appendChild(opt3);
-        formulario.appendChild(seleccion);
+        
+// Agregar las opciones al elemento <select>
+seleccion.appendChild(option1);
+seleccion.appendChild(option2);
+document.appendChild(seleccion)
         formulario.appendChild(br14);
 
     //TEXTAREA  
