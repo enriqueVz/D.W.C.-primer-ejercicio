@@ -1,4 +1,13 @@
 function cargar(){
+
+
+
+//Título de la pag
+
+const h1ttl = document.createElement("h1");
+h1ttl.textContent = "Airsoft España";
+
+
     //lLamamos al div
     const formarContainer = document.getElementById("formContainer");
 
@@ -87,7 +96,7 @@ const brcampo = document.createElement("br");
 
 const fset1 = document.createElement("fieldset");
 const fset1l = document.createElement("legend");
-fset1l.textContent = "Seleccione una opción (1)";
+fset1l.textContent = "Seleccione una pistola";
 
 //LOS BOTONES TIENEN EL MISMO ATRIBUTO "NAME" PARA QUE SÓLO PUEDA SELECCIONARSE 1.
      //BOTONES RADIO1
@@ -96,7 +105,7 @@ fset1l.textContent = "Seleccione una opción (1)";
      radgen1.setAttribute("name", "1");
      //LABEL
         const radgen1l = document.createElement("label");
-        radgen1l.textContent = "сука Ёб тбою мать";
+        radgen1l.textContent = "Glock-18C";
      const saltobr = document.createElement("br");
       //SALTO DE LINEA (DEFINIDO ABAJO EN LOS CHILDS)
 
@@ -106,7 +115,7 @@ fset1l.textContent = "Seleccione una opción (1)";
      radgen2.setAttribute("name", "1");
      //LABEL
         const radgen2l = document.createElement("label");
-        radgen2l.textContent = "сука Ёб тбою мать";
+        radgen2l.textContent = "Beretta M9";
      const saltobr0 = document.createElement("br");
 
      const radgen3 = document.createElement("input");
@@ -114,7 +123,7 @@ fset1l.textContent = "Seleccione una opción (1)";
      radgen3.setAttribute("name", "1");
      //LABEL
          const radgen3l = document.createElement("label");
-         radgen3l.textContent = "сука Ёб тбою мать";
+         radgen3l.textContent = "Sig Sauer P226";
      const saltobr1 = document.createElement("br");
 
      const radgen4 = document.createElement("input");
@@ -123,7 +132,7 @@ fset1l.textContent = "Seleccione una opción (1)";
 
      //LABEL
         const radgen4l = document.createElement("label");
-        radgen4l.textContent = "сука Ёб тбою мать";
+        radgen4l.textContent = "Taurus Raging Bull";
      const saltobr2 = document.createElement("br");
 
      const brbtns = document.createElement("br");
@@ -136,14 +145,14 @@ fset1l.textContent = "Seleccione una opción (1)";
 //CREACIÓN DEL FIELDSET
 const fset2 = document.createElement("fieldset");
 const fset2l = document.createElement("legend");
-fset2l.textContent= "Seleccione una opción (1)";
+fset2l.textContent= "Seleccione un AR (assault rifle)";
 
      const radgen5 = document.createElement("input");
      radgen5.setAttribute("type","radio");
      radgen5.setAttribute("name", "2");
      //LABEL
         const radgen5l = document.createElement("label");
-        radgen5l.textContent = "сука Ёб тбою мать";
+        radgen5l.textContent = "AK-74N";
      const saltobr5 = document.createElement("br");
       //SALTO DE LINEA (DEFINIDO ABAJO EN LOS CHILDS)
 
@@ -153,7 +162,7 @@ fset2l.textContent= "Seleccione una opción (1)";
      radgen6.setAttribute("name", "2");
      //LABEL
         const radgen6l = document.createElement("label");
-        radgen6l.textContent = "сука Ёб тбою мать";
+        radgen6l.textContent = "CM-16 Raider";
      const saltobr6 = document.createElement("br");
 
      const radgen7 = document.createElement("input");
@@ -161,7 +170,7 @@ fset2l.textContent= "Seleccione una opción (1)";
      radgen7.setAttribute("name", "2");
      //LABEL
          const radgen7l = document.createElement("label");
-         radgen7l.textContent = "сука Ёб тбою мать";
+         radgen7l.textContent = "AN-94";
      const saltobr7 = document.createElement("br");
 
      const radgen8 = document.createElement("input");
@@ -170,7 +179,7 @@ fset2l.textContent= "Seleccione una opción (1)";
 
      //LABEL
         const radgen8l = document.createElement("label");
-        radgen8l.textContent = "сука Ёб тбою мать";
+        radgen8l.textContent = "M16";
      const saltobr8 = document.createElement("br");
 
 
@@ -181,7 +190,7 @@ fset2l.textContent= "Seleccione una opción (1)";
 
      const fset3 = document.createElement("fieldset");
      const fset3l = document.createElement("legend");
-     fset3l.textContent = "Selección múltiple";
+     fset3l.textContent = "¿En qué productos está interesado?";
 
         const chbx0 = document.createElement("input");
             chbx0.setAttribute("type", "checkbox");
@@ -189,35 +198,35 @@ fset2l.textContent= "Seleccione una opción (1)";
         chbx0.setAttribute("checked", "true");
             //LABEL
         const chbx0l = document.createElement("label");
-                chbx0l.textContent = "хуй на попа";
+                chbx0l.textContent = "Armas";
                     const br6 = document.createElement("br");
 
         const chbx1 = document.createElement("input");
         chbx1.setAttribute("type", "checkbox");
         //LABEL
         const chbx1l = document.createElement("label");
-                chbx1l.textContent = "хуй на попа";
+                chbx1l.textContent = "Ropa";
                   const br7 = document.createElement("br");
 
         const chbx2 = document.createElement("input");
         chbx2.setAttribute("type", "checkbox");
         //LABEL
          const chbx2l = document.createElement("label");
-             chbx2l.textContent = "хуй на попа";
+             chbx2l.textContent = "Equipo de protección";
                  const br8 = document.createElement("br");
 
         const chbx3 = document.createElement("input");
         chbx3.setAttribute("type", "checkbox");
         //LABEL
         const chbx3l = document.createElement("label");
-                chbx3l.textContent = "хуй на попа";
+                chbx3l.textContent = "Consumibles";
                   const br9 = document.createElement("br");
 
         const chbx4 = document.createElement("input");
         chbx4.setAttribute("type", "checkbox");
         //LABEL
         const chbx4l = document.createElement("label");
-                chbx4l.textContent = "хуй на попа";
+                chbx4l.textContent = "Modificaciones";
                     const br10 = document.createElement("br");
         
 
@@ -225,12 +234,16 @@ fset2l.textContent= "Seleccione una opción (1)";
     //Imágenes
 
     const img1 = document.createElement("img");
-    img1.src ="/Descargas/bali1.png";
+    img1.setAttribute("id", "imagen1")
+     const  img1src = "descargas/bali1.jpg";
+    img1.src = img1src;
 const br11 = document.createElement("br");
 
 
     const img2 = document.createElement("img");
-    img2.setAttribute("src", "/descargas/bal11.jpg");
+    img2.setAttribute("id", "imagen2");
+    const  img2src = "descargas/bali1.jpg";
+    img2.src = img2src;
  const br12 = document.createElement("br");
 
 
@@ -257,12 +270,12 @@ opt3.setAttribute("text", "Opción 3")
 
 
  // TEXTAREA
-//MIRAR EL ROW/COLSPAN
+
  const texta = document.createElement("textarea");
 texta.setAttribute("rows", "15");
 texta.setAttribute("cols", "30");
 texta.setAttribute("resize", "yes");
-texta.setAttribute("placeholder", "Algo interesante...");
+texta.setAttribute("placeholder", "¿Por qué deberías ser elegido en el sorteo?");
  const br13 = document.createElement("br");
 
        
@@ -291,11 +304,12 @@ btnwipe.setAttribute("type", "reset");
 
 
 
-
-
  
     //CON ESTO HACEMOS QUE SE INTEGREN LOS ELEMENTOS Y EL FORMULARIO EN EL DIV
     formarContainer.appendChild(formulario);
+
+    //H1
+    formulario.appendChild(h1ttl);
 
     
     //Elementos del campo de formularios
@@ -406,11 +420,13 @@ btnwipe.setAttribute("type", "reset");
             formulario.appendChild(fset3);
 
         //IMG´s
-
+    //primera imagen
     formulario.appendChild(img1);
+       img1.src = "ofi1.jpg";
         formulario.appendChild(br11);
 
-    formulario.appendChild(img2 );
+    formulario.appendChild(img2);
+    img2.src ="ofi2.jpg";
         formulario.appendChild(br12);
 
         //sELECT
