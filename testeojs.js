@@ -235,34 +235,42 @@ fset2l.textContent= "Seleccione un AR (assault rifle)";
 
     const img1 = document.createElement("img");
     img1.setAttribute("id", "imagen1")
-     const  img1src = "descargas/bali1.jpg";
-    img1.src = img1src;
-const br11 = document.createElement("br");
+    img1.setAttribute("width", "20%");
+    img1.setAttribute("height", "20%");
+    img1.src = "airsoft2.jpg";
+   
+
 
 
     const img2 = document.createElement("img");
     img2.setAttribute("id", "imagen2");
-    const  img2src = "descargas/bali1.jpg";
-    img2.src = img2src;
+    img2.setAttribute("width", "20%");
+     img2.setAttribute("width", "20%");
+     img2.setAttribute("display", "in-line");
+     img2.src = "airsoft1.webp";
+
  const br12 = document.createElement("br");
 
 
- // CAMPO SELECT (ARREGLAR LOS TEXTOS Y EL PLACEHOLDER)
+//SELECT
+        //Texto previo a la selección 
+const textoprevio = document.createElement("h3");
+textoprevio.textContent = "Seleccione una opción de envío: ";
 
+//Creación del boton select y valores
  const seleccion = document.createElement("select");
-seleccion.textContent = "Haga click para elegir";
-seleccion.setAttribute("placeholder", "Haga click para elegir");
+
 const opt1 = document.createElement("option");
-opt1.setAttribute("text", "opt1")
-opt1.setAttribute("name", "Opción 1")
+opt1.value ="valor1";
+opt1.text = "Recogida en tienda";
 
 const opt2 = document.createElement("option");
-opt2.setAttribute("text", "opt2")
-opt2.setAttribute("name", "Opción 2")
+opt2.value = "valor2";
+opt2.text = "Recogida en la oficina de correos";
 
 const opt3 = document.createElement("option");
-opt3.setAttribute("value", "opt3")
-opt3.setAttribute("text", "Opción 3")
+opt3.value = "valor3";
+opt3.text = "Envío a domicilio";
 
 
  const br14 = document.createElement("br");
@@ -293,6 +301,12 @@ btnwipe.textContent ="Limpiar";
 btnwipe.setAttribute("type", "reset");
 
 
+// Breaks de imgs
+
+const brimg1 = document.createElement("br");
+const brimg2 = document.createElement("br");
+const brimg3 = document.createElement("br");
+const brimg4 = document.createElement("br");
 
 
 
@@ -417,21 +431,26 @@ btnwipe.setAttribute("type", "reset");
         fset3.appendChild(chbx4l);
         fset3.appendChild(br10);
     
+    
             formulario.appendChild(fset3);
 
+            //Espaciadores
+            formulario.appendChild(brimg1);
         //IMG´s
     //primera imagen
     formulario.appendChild(img1);
-       img1.src = "ofi1.jpg";
-        formulario.appendChild(br11);
+    
+    
+    formulario.appendChild(brimg3);
 
     formulario.appendChild(img2);
-    img2.src ="ofi2.jpg";
         formulario.appendChild(br12);
 
+        
+        formulario.appendChild(brimg4);
         //sELECT
 
-
+        formulario.appendChild(textoprevio);
         seleccion.appendChild(opt1);
         seleccion.appendChild(opt2);
         seleccion.appendChild(opt3);
