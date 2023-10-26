@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Pedido de Pizza</title>
+</head>
+<body>
+    <h1>Pedido de Pizza</h1>
+    <form id="pizzaForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+        
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" required><br><br>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        
+        <label>Tamaño de la Pizza:</label><br>
+        <input type="radio" name="tamano" value="pequena" required> Pequeña (5€)<br>
+        <input type="radio" name="tamano" value="mediana" required> Mediana (10€)<br>
+        <input type="radio" name="tamano" value="grande" required> Grande (15€)<br><br>
+        
+        <label>Ingredientes (al menos uno):</label><br>
+        <input type="checkbox" name="ingredientes" value="queso"> Queso (+1€)<br>
+        <input type="checkbox" name="ingredientes" value="jamón"> Jamón (+1€)<br>
+        <input type="checkbox" name="ingredientes" value="champiñones"> Champiñones (+1€)<br>
+        <input type="checkbox" name="ingredientes" value="aceitunas"> Aceitunas (+1€)<br><br>
+        
+        <button type="button" onclick="calcularPrecio()">Procesar el Pedido</button>
+    </form>
+    
+    <div id="precioTotal" style="display: none;">
+        <h2>Precio Total del Pedido:</h2>
+        <p id="precio"></p>
+    </div>
+
+    <script>
+        function calcularPrecio() {
+            // Obtener el tamaño de la pizza seleccionado
+            const tamanoPizza = document.querySelector('input[name="tamano"]:checked');
+            if (!tamanoPizza) {
+                alert('Debe seleccionar un tamaño de pizza.');
+                return;
+            }
+            
+            // Obtener los ingredientes seleccionados
+            const ingredientesSeleccionados = document.querySelectorAll('input[name="ingredientes"]:checked');
+            if (ingredientesSeleccionados.length === 0) {
+                alert('Debe seleccionar al menos un ingrediente.');
+                return;
+            }
+            
+            // Calcular el precio base de la pizza
+            let precioBase = 0;
+            switch (tamanoPizza.value) {
+                case "pequena":
+                    precioBase = 5;
+                    break;
+                case "mediana":
+                    precioBase = 10;
+                    break;
+                case "grande":
+                    precioBase = 15;
+                    break;
+            }
+            
+            // Calcular el precio de los ingredientes
+            let precioIngredientes = ingredientesSeleccionados.length;
+            
+            // Calcular el precio total
+            const precioTotal = precioBase + precioIngredientes;
+            
+            // Mostrar el precio total en la página
+            document.getElementById('precio').textContent = precioTotal + '€';
+            document.getElementById('precioTotal').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
