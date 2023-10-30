@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario de Pedido de Pizza</title>
+        <meta charset="UTF-8">
+        <script src="archivojs.js"></script>
+    </head>
+    
+    <body>
+        <h1>Pedido de Pizza</h1>
+        <form id="pizzaForm">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required><br><br>
+        
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required><br><br>
+        
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" required><br><br>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <br><br>
+        
+            <label>Tamaño de la Pizza:</label><br>
+            <input type="radio" id="radio1" name="tamano" value="pequena" required>
+            <label for="radio1">Pequeña (5€)</label><br>
+            <input type="radio" id="radio2" name="tamano" value="mediana" required>
+            <label for="radio2">Mediana (10€)</label><br>
+            <input type="radio" id="radio3" name="tamano" value="grande" required>
+            <label for="radio3">Grande (15€)</label><br>
+            <br>
+            <label>Ingredientes (al menos uno):</label><br>
+            <input type="checkbox" id="checkbox1"name="ingredientes" value="queso"> 
+            <label for="checkbox1">Queso (+1€)</label><br>
+            <input type="checkbox" id="checkbox2" name="ingredientes" value="jamón"> 
+            <label for="checkbox2">Jamón (+1€)</label><br>
+            <input type="checkbox" id="checkbox3" name="ingredientes" value="champiñones">
+            <label for="checkbox3">Champiñones(+1€)</label><br>
+            <input type="checkbox" id="checkbox4" name="ingredientes" value="aceitunas">
+            <label for="checkbox4">Aceitunas (+1€)</label><br>
+            <br>
+            <button type="button" id="button1">Procesar el Pedido</button>
+        </form>
+
+        <div id="precioTotal" style="display: none;">
+            <h2>Precio Total del Pedido:</h2>
+            <p id="precio"></p>
+        </div>
+</body>
+</html>
