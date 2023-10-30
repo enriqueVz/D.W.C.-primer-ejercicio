@@ -1,6 +1,7 @@
 function calcularPrecio() {
     // Obtener el tamaño de la pizza seleccionado
-    const tamanoPizza = document.querySelector('input[name="tamano"]:checked');
+    //Como mucho puede haber un tamaño seleccionado, luego usamos document.querySelector
+    const tamanoPizza = document.querySelector('input[class="pizza"]:checked');
     if (!tamanoPizza) {
         alert('Debe seleccionar un tamaño de pizza.');
         return;
@@ -15,7 +16,7 @@ function calcularPrecio() {
     
     // Calcular el precio base de la pizza
     let precioBase = 0;
-    switch (tamanoPizza.value) {
+        switch (tamanoPizza.value) {
         case "pequena":
             precioBase = 5;
             break;
@@ -25,8 +26,8 @@ function calcularPrecio() {
         case "grande":
             precioBase = 15;
             break;
-    }
-    
+        }
+
     // Calcular el precio de los ingredientes
     let precioIngredientes = ingredientesSeleccionados.length;
     

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario de Pedido de Pizza</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="archivocss.css">
+        <script src="archivojs.js"></script>
+    </head>
+    
+    <body>
+        <h1>Pedido de Pizza</h1>
+        <form id="pizzaForm">
+
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre y apellido:</label></td>
+                    <td><input type="text" id="nombre" placeholder="Nombre" required></td>
+                    <td><input type="text" id="apellido" placeholder="Apellido" required></td>
+                </tr>
+                <tr>
+                    <td><label for="direccion">Dirección:</label></td>
+                    <td colspan="2"><input type="text" id="direccion" placeholder="Introduce calle y portal" size=45 required></td>
+                </tr>
+                <tr>
+                    <td><label for="telefono">Teléfono:</label></td>
+                    <td colspan="2"><input type="text" id="telefono" placeholder="Introduce tu número" size="45" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dircorele">Correo electrónico:</label></td>
+                    <td colspan="2"><input type="email" id="dircorele" placeholder="Introduce tu email" size="45" required></td>
+                </tr>
+            </table>
+            <br>
+            <div>
+                <label>Tamaño:</label><br>
+                <input type="radio" id="radio1" class="pizza" name="clasica1" value="pequena">
+                <label for="radio1">Pequeña (5€)</label><br>
+                <input type="radio" id="radio2" class="pizza" name="clasica1" value="mediana">
+                <label for="radio2">Mediana (10€)</label><br>
+                <input type="radio" id="radio3" class="pizza" name="clasica1" value="grande">
+                <label for="radio3">Grande (15€)</label><br>
+            </div>
+            <br>
+            <div>
+                <label>Ingredientes (al menos uno):</label><br>
+                <input type="checkbox" id="checkbox1"name="ingredientes" value="queso"> 
+                <label for="checkbox1">Queso (+1€)</label><br>
+                <input type="checkbox" id="checkbox2" name="ingredientes" value="jamón"> 
+                <label for="checkbox2">Jamón (+1€)</label><br>
+                <input type="checkbox" id="checkbox3" name="ingredientes" value="champiñones">
+                <label for="checkbox3">Champiñones(+1€)</label><br>
+                <input type="checkbox" id="checkbox4" name="ingredientes" value="aceitunas">
+                <label for="checkbox4">Aceitunas (+1€)</label><br>
+            </div>
+            <br>
+            <button type="button" onclick="calcularPrecio()">Procesar el Pedido</button>
+            <input type="reset" value="Limpiar formulario" />
+        </form>
+
+        <div id="precioTotal" style="display: none;">
+            <h2>Precio Total del Pedido:</h2>
+            <p id="precio"></p>
+        </div>
+</body>
+</html>

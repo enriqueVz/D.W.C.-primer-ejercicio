@@ -77,8 +77,10 @@ function cargar(){
 
     //Teléfono: label e input. El teléfono es type number.
     const tlflabel = document.createElement("label");
+    tlflabel.setAttribute("for", "numerotelefono");
     tlflabel.textContent = "Introduzca su número de teléfono ";
     const tlfinput = document.createElement("input");
+    tlfinput.setAttribute("id", "numerotelefono");
     tlfinput.setAttribute("type", "number");
     tlfinput.setAttribute("placeholder", "Teléfono");
     
