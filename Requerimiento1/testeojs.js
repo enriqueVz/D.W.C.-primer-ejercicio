@@ -233,7 +233,6 @@ function cargar(){
     img2.setAttribute("id", "imagen2");
     img2.setAttribute("width", "20%");
     img2.setAttribute("width", "20%");
-    img2.setAttribute("display", "in-line");
     img2.src = "airsoft1.webp";
 
     //-------------------SELECT--------------------------------------
@@ -295,11 +294,9 @@ function cargar(){
     const btnwipe = document.createElement("input");
     btnwipe.setAttribute("type", "reset");
     btnwipe.setAttribute("value", "Limpiar formulario");
-
     btnwipe.addEventListener("click", recargarPagina);
-      
-
-
+    
+    //---------------------------------------------------------------------------------------
     //El contenedor formarContainer tiene por hijos a elementoh1 y a formulario
     formarContainer.appendChild(elementoh1);
     formarContainer.appendChild(formulario);

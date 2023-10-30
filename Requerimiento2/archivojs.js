@@ -1,13 +1,13 @@
 function calcularPrecio() {
     // Obtener el tamaño de la pizza seleccionado
-    //Como mucho puede haber un tamaño seleccionado, luego usamos document.querySelector
-    const tamanoPizza = document.querySelector('input[class="pizza"]:checked');
+    //Como mucho puede haber un tamaño seleccionado, luego usamos querySelector
+    const tamanoPizza = document.querySelector('input[name="tamano"]:checked');
     if (!tamanoPizza) {
         alert('Debe seleccionar un tamaño de pizza.');
         return;
     }
     
-    // Obtener los ingredientes seleccionados
+    //Dado que pueden ser varios los ingredientes seleccionados, usamos querySelectorAll
     const ingredientesSeleccionados = document.querySelectorAll('input[name="ingredientes"]:checked');
     if (ingredientesSeleccionados.length === 0) {
         alert('Debe seleccionar al menos un ingrediente.');
