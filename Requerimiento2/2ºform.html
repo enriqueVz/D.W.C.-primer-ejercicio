@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+            <script>
+
+         function procesarPedido(){
+         
+
+                var nom = document.getElementById("nombre");
+                var drc = document.getElementById("direccion");
+                var tlf = document.getElementById("telefono");
+                var mail = document.getElementById("email");
+        
+                var opt1 = document.getElementById("peque");
+                var opt2 = document.getElementById("mid");
+                var opt3 = document.getElementById("big");
+
+                var ch1 = document.getElementById("peperoni");
+                var ch2 = document.getElementById("gouda");
+                var ch3 = document.getElementById("cebolla");
+                var ch4 = document.getElementById("anchoas");
+                
+                
+opt1.setAttribute("valor", "5");
+opt2.setAttribute("valor", "10");
+opt3.setAttribute("valor", "15");
+
+ch1.setAttribute("valor", "1");
+ch2.setAttribute("valor", "1");
+ch3.setAttribute("valor", "1");
+ch4.setAttribute("valor", "1");
+
+
+
+
+
+
+          /*    const btnP =  document.getElementById("btn");
+               btnP.addEventListener("click", (event) => procesarPedido());
+               */
+
+               
+
+               
+                //ESTO SALE PERO SOLO 1 SEG
+          var txt1 = document.createElement("h1");
+          txt1.textContent = "Su pedido es el siguiente:"
+            var nom1 = document.createElement("h3");
+          nom1.textContent = "Nombre";
+
+          txt1.textContent = "Su pedido es el siguiente:"
+          txt1.textContent = "Su pedido es el siguiente:"
+          txt1.textContent = "Su pedido es el siguiente:"
+
+
+          document.getElementById("main");
+        main.appendChild(txt1);
+        main.appendChild(nom1);
+
+           
+        
+
+
+
+
+
+
+            }
+
+
+
+            </script>
+    </head>
+<html>
+
+<header style="text-align: center;">2º apartado del ejercicio</header>
+<body>
+
+    <fieldset>
+    
+        <label>Introduzca su nombre</label>  
+            <input placeholder="nombre" id="nombre">
+                <br>
+                <label>Introduzca su dirección</label>  
+                <input placeholder="dirección" id="direccion">
+                    <br>
+                    <label>Introduzca su teléfono</label>  
+                    <input placeholder="teléfono" id="telefono">
+                        <br>
+                        <label>Introduzca su email</label>  
+                        <input placeholder="email" id="email">
+                            <br>
+                           
+
+
+    </fieldset>
+    <form>     
+
+                    <fieldset>
+                            <legend>Elija un tamaño de la pizza:</legend>
+                        <input type="radio" name="pequeña" id="peque">pequeña</input>
+                        <br>
+                        <input type="radio" name="mediana" id="mid">mediana</input>
+                        <br>
+                        <input type="radio" name="grande" id="big">grande</input>
+                        
+                    </fieldset>
+            
+                    <fieldset>
+
+                    <legend>Seleccione sus hobbies</legend>
+                        <input type="checkbox" id="peperoni">peperoni
+                        <br>
+                        <input type="checkbox" id="gouda">gouda
+                        <br>
+                        <input type="checkbox" id="cebolla">cebolla
+                        <br>
+                        <input type="checkbox" id="anchoas">anchoas
+                        <br>
+                    </fieldset>
+<br>
+<br>
+
+<button id="btn" onclick="procesarPedido()">Procesar pedido</button>
+
+
+    </form>
+    
+<div id="main">
+</div>
+
+</body>
+
+</html>
