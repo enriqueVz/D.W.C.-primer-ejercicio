@@ -21,7 +21,7 @@ function activarRadio() {
     }
 
     for (clasica3 of clasicas3) {
-        clasica3.disabled = !document.getElementById("checkboxcarbonara").checked;
+        clasica3.disabled = !document.getElementById("checkboxhawaiana").checked;
     }
 }
 
